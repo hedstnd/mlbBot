@@ -28,7 +28,7 @@ async function main() {
 	const nickNames = JSON.parse(tmNickJSON)
 	const cityNames = JSON.parse(cityJSON)
 	const playerNames = JSON.parse(playerNameJSON)
-	const placeNames = JSON.parse([placeJSON)
+	const placeNames = JSON.parse(placeJSON)
 	const milbLvls = JSON.parse(milbJSON)
 	retStr = postList[Math.floor(Math.random() * postList.length)]
 	while (retStr.includes("playerName")) {
@@ -50,12 +50,12 @@ async function main() {
         retStr = retStr.replace("milbLvl",milbLvls[Math.floor(Math.random() * milbLvls.length)])
     }
 	while (retStr.includes("randNum")) {
-        retStr = retStr.replace("randNum",(Math.floor(Math.random())*162))
+        retStr = retStr.replace("randNum",""+Math.floor(163*Math.random()))
     }
 	while (retStr.includes("yearNum")) {
 		const d = new Date()
 		d.setMonth(d.getMonth() + 2)
-        retStr = retStr.replace("yearNum",d.getYear())
+        retStr = retStr.replace("yearNum",""+d.getFullYear())
     }
     await agent.login({ identifier: process.env.BLUESKY_USERNAME!, password: process.env.BLUESKY_PASSWORD!})
     await agent.post({
@@ -69,7 +69,7 @@ main();
 
 // Run this on a cron job
 const scheduleExpressionMinute = '* * * * *'; // Run once every minute for testing
-const scheduleExpression = '0 */3 * * *'; // Run once every three hours in prod
+const scheduleExpression = '*/30 * * * *'; // Run once every three hours in prod
 
 const job = new CronJob(scheduleExpression, main); // change to scheduleExpressionMinute for testing
 

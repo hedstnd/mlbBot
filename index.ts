@@ -2,7 +2,7 @@ import { BskyAgent } from '@atproto/api';
 import * as dotenv from 'dotenv';
 import { CronJob } from 'cron';
 import * as process from 'process';
-import fs from "node:fs";
+import * as fs from 'fs';
 
 dotenv.config();
 
@@ -16,13 +16,13 @@ const agent = new BskyAgent({
 
 
 async function main() {
-	const postStringJSON = fs.readFileSync("./postList.json")
-	const tmNameJSON = fs.readFileSync("./teamNames.json")
-	const tmNickJSON = fs.readFileSync("./teamNicknames.json")
-	const cityJSON = fs.readFileSync("./cityNames.json")
-	const playerNameJSON = fs.readFileSync("./playerNames.json")
-	const placeJSON = fs.readFileSync("./places.json")
-	const milbJSON = fs.readFileSync("./milbLvls.json")
+	const postStringJSON = fs.readFileSync("./postList.json",{"encoding":"utf8"})
+	const tmNameJSON = fs.readFileSync("./teamNames.json",{"encoding":"utf8"})
+	const tmNickJSON = fs.readFileSync("./teamNicknames.json",{"encoding":"utf8"})
+	const cityJSON = fs.readFileSync("./cityNames.json",{"encoding":"utf8"})
+	const playerNameJSON = fs.readFileSync("./playerNames.json",{"encoding":"utf8"})
+	const placeJSON = fs.readFileSync("./places.json",{"encoding":"utf8"})
+	const milbJSON = fs.readFileSync("./milbLvls.json",{"encoding":"utf8"})
 	const postList = JSON.parse(postStringJSON)
 	const teamNames = JSON.parse(tmNameJSON)
 	const nickNames = JSON.parse(tmNickJSON)

@@ -1,15 +1,15 @@
 0 info it worked if it ends with ok
 1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
 1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
-1 verbose cli   'i',
-1 verbose cli   '-g',
-1 verbose cli   'npm' ]
+1 verbose cli   'install',
+1 verbose cli   'npm@latest',
+1 verbose cli   '-g' ]
 2 info using npm@3.10.10
 3 info using node@v6.17.1
 4 silly loadCurrentTree Starting
 5 silly install loadCurrentTree
 6 silly install readGlobalPackageData
-7 silly fetchPackageMetaData npm
+7 silly fetchPackageMetaData npm@latest
 8 silly fetchNamedPackageData npm
 9 silly mapToRegistry name npm
 10 silly mapToRegistry using default registry
@@ -25,36 +25,36 @@
 13 silly mapToRegistry uri https://registry.npmjs.org/npm
 14 verbose request uri https://registry.npmjs.org/npm
 15 verbose request no auth needed
-16 info attempt registry request try #1 at 6:04:17 PM
-17 verbose request id aba2982fbfc54564
+16 info attempt registry request try #1 at 7:12:53 PM
+17 verbose request id a4252d75e36cb813
 18 verbose etag W/"ca3ad3679a3dabf69bc8eee4df200a28"
 19 verbose lastModified Wed, 21 May 2025 22:26:16 GMT
 20 http request GET https://registry.npmjs.org/npm
 21 http 304 https://registry.npmjs.org/npm
-22 verbose headers { date: 'Mon, 02 Jun 2025 22:04:19 GMT',
+22 verbose headers { date: 'Mon, 02 Jun 2025 23:12:54 GMT',
 22 verbose headers   connection: 'keep-alive',
-22 verbose headers   'cf-ray': '949a3eee281afbf2-EWR',
+22 verbose headers   'cf-ray': '949aa366dc80cd7f-EWR',
 22 verbose headers   'cf-cache-status': 'HIT',
 22 verbose headers   'access-control-allow-origin': '*',
-22 verbose headers   age: '92',
+22 verbose headers   age: '152',
 22 verbose headers   'cache-control': 'public, max-age=300',
 22 verbose headers   etag: '"ca3ad3679a3dabf69bc8eee4df200a28"',
 22 verbose headers   'last-modified': 'Wed, 21 May 2025 22:26:16 GMT',
 22 verbose headers   vary: 'Accept-Encoding',
-22 verbose headers   'set-cookie': [ '_cfuvid=M6RNYY4CMhMt5G4btJbIDTGRFIi6Vh6Q.L59tlp6ids-1748901859573-0.0.1.1-604800000; path=/; domain=.npmjs.org; HttpOnly; Secure; SameSite=None' ],
+22 verbose headers   'set-cookie': [ '_cfuvid=OwFuzIs2YRUIaoNC4rjnHamOnKvjwkjDA8y8VjYfI00-1748905974872-0.0.1.1-604800000; path=/; domain=.npmjs.org; HttpOnly; Secure; SameSite=None' ],
 22 verbose headers   server: 'cloudflare' }
 23 silly get cb [ 304,
-23 silly get   { date: 'Mon, 02 Jun 2025 22:04:19 GMT',
+23 silly get   { date: 'Mon, 02 Jun 2025 23:12:54 GMT',
 23 silly get     connection: 'keep-alive',
-23 silly get     'cf-ray': '949a3eee281afbf2-EWR',
+23 silly get     'cf-ray': '949aa366dc80cd7f-EWR',
 23 silly get     'cf-cache-status': 'HIT',
 23 silly get     'access-control-allow-origin': '*',
-23 silly get     age: '92',
+23 silly get     age: '152',
 23 silly get     'cache-control': 'public, max-age=300',
 23 silly get     etag: '"ca3ad3679a3dabf69bc8eee4df200a28"',
 23 silly get     'last-modified': 'Wed, 21 May 2025 22:26:16 GMT',
 23 silly get     vary: 'Accept-Encoding',
-23 silly get     'set-cookie': [ '_cfuvid=M6RNYY4CMhMt5G4btJbIDTGRFIi6Vh6Q.L59tlp6ids-1748901859573-0.0.1.1-604800000; path=/; domain=.npmjs.org; HttpOnly; Secure; SameSite=None' ],
+23 silly get     'set-cookie': [ '_cfuvid=OwFuzIs2YRUIaoNC4rjnHamOnKvjwkjDA8y8VjYfI00-1748905974872-0.0.1.1-604800000; path=/; domain=.npmjs.org; HttpOnly; Secure; SameSite=None' ],
 23 silly get     server: 'cloudflare' } ]
 24 verbose etag https://registry.npmjs.org/npm from cache
 25 verbose get saving npm to C:\Users\jkeds\AppData\Roaming\npm-cache\registry.npmjs.org\npm\.cache.json
@@ -72,14 +72,14 @@
 37 silly loadAllDepsIntoIdealTree Starting
 38 silly install loadAllDepsIntoIdealTree
 39 silly resolveWithNewModule npm@11.4.1 checking installable status
-40 silly cache add args [ 'npm', null ]
-41 verbose cache add spec npm
+40 silly cache add args [ 'npm@latest', null ]
+41 verbose cache add spec npm@latest
 42 silly cache add parsed spec Result {
-42 silly cache add   raw: 'npm',
+42 silly cache add   raw: 'npm@latest',
 42 silly cache add   scope: null,
 42 silly cache add   escapedName: 'npm',
 42 silly cache add   name: 'npm',
-42 silly cache add   rawSpec: '',
+42 silly cache add   rawSpec: 'latest',
 42 silly cache add   spec: 'latest',
 42 silly cache add   type: 'tag' }
 43 silly addNamed npm@latest
@@ -109,9 +109,9 @@
 60 verbose correctMkdir C:\Users\jkeds\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
 61 verbose addBundled extract C:\Users\jkeds\AppData\Roaming\npm-cache\npm\11.4.1\package.tgz
 62 verbose tar unpack C:\Users\jkeds\AppData\Roaming\npm-cache\npm\11.4.1\package.tgz
-63 verbose tar unpacking to C:\Users\jkeds\AppData\Local\Temp\npm-35224-3bf7e6d6\unpack-483678b0
-64 silly gentlyRm C:\Users\jkeds\AppData\Local\Temp\npm-35224-3bf7e6d6\unpack-483678b0 is being purged
-65 verbose gentlyRm don't care about contents; nuking C:\Users\jkeds\AppData\Local\Temp\npm-35224-3bf7e6d6\unpack-483678b0
+63 verbose tar unpacking to C:\Users\jkeds\AppData\Local\Temp\npm-14300-79f8398c\unpack-49b8c5b6
+64 silly gentlyRm C:\Users\jkeds\AppData\Local\Temp\npm-14300-79f8398c\unpack-49b8c5b6 is being purged
+65 verbose gentlyRm don't care about contents; nuking C:\Users\jkeds\AppData\Local\Temp\npm-14300-79f8398c\unpack-49b8c5b6
 66 silly gunzTarPerm modes [ '777', '666' ]
 67 silly gunzTarPerm extractEntry node_modules/sprintf-js/dist/.gitattributes
 68 silly gunzTarPerm modified mode [ 'node_modules/sprintf-js/dist/.gitattributes', 420, 438 ]
@@ -6144,7 +6144,7 @@
 4615 verbose stack     at Array.forEach (native)
 4616 verbose cwd C:\Users\jkeds\Documents\shitpostBot
 4617 error Windows_NT 10.0.26100
-4618 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "i" "-g" "npm"
+4618 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "npm@latest" "-g"
 4619 error node v6.17.1
 4620 error npm  v3.10.10
 4621 error Unsupported URL Type: npm:string-width@^4.2.0
